@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+html,body { 
+    width: 100%;
+}
+
+/* reset */
+
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, 
+p, a, address, em, img, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, footer, header, hgroup, 
+menu, nav, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+ul, li {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+a {
+    color: #333333; 
+    text-decoration: none; 
+    outline: none 
+}
+
+a:hover, a:active{
+    text-decoration: none; 
+    color:#333333; 
+}
+
+
+
+.chart1 {
+   
+}
+
+
+header {
+    height: 100px;
+    width: 100px;
+    background: yellow;
+    border: 1px solid;
+}
+
+
