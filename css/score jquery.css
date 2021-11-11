@@ -1274,6 +1274,12 @@ section > div, .level_box {
 }
 
 
-@media screen and (max-width: 682px) {
+@media screen and (max-width: 375px) {
+    section > div, .level_box, .check_box, .achieving_part,
+    .weekness_box, .next_box, .recommend_box {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
 
 }
