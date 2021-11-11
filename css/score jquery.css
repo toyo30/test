@@ -1275,6 +1275,9 @@ section > div, .level_box {
 
 
 @media screen and (max-width: 375px) {
+	#wrap {
+		min-width: 375px;
+	}
     section > div, .level_box, .check_box, .achieving_part,
     .weekness_box, .next_box, .recommend_box {
         width: 100%;
