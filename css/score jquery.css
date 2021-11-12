@@ -108,14 +108,13 @@ a:hover, a:active{
 #wrap {
     width: 100%;
     background: linear-gradient(180deg, #131313 0%, #212121 100%);
-    color: #FFFFFF;
-    min-width: 1094px;
+    color: #FFFFFF; 
 }
 
 
 /* container layout*/
 section > div, .level_box {
-    width: 1094px;
+    max-width: 1094px;
     margin: 0 auto;
     text-align: center;
 }
@@ -126,7 +125,7 @@ section > div, .level_box {
 .head_area {
     position: relative;
     display: flex;
-    width: 1094px;
+    max-width: 1094px;
     height: 175px;
     margin: 0 auto;
     justify-content: center;
@@ -137,16 +136,14 @@ section > div, .level_box {
 .student_info {
     position: absolute;
     bottom: 52px;
-    left: 15px;
+    left: 3px;
     table-layout:fixed;
     font-size: 10px;
     box-sizing:border-box;
 }
 
 .student_info > tbody > tr > td {
-    border-right: 10px solid #131313;
-    border-bottom: 2px solid #131313;
-    
+    padding: 2px 5px;
 }
 
 .tab_text {
@@ -544,7 +541,7 @@ section > div, .level_box {
 
 .check_box {
     display: none;
-    width: 1094px;
+    max-width: 1094px;
     margin: 0 auto;
     padding-top: 25.27px;
 }
@@ -616,19 +613,27 @@ section > div, .level_box {
 /* achieving_part */
 
 .achiving_part {
-    padding: 88px 70px 70px 140px;
-    display: block;
-
+    padding: 88px 70px 140px 70px;
+    display: none;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* <canvas id="chart_achiving"></canvas> */
 
 .average_graph_part {
     display: none;
-    padding: 77px 20px 20px 138px;
-    background: brown;
+    padding: 77px 20px 138px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: visible;
 }
 
+#chart_average {
+    overflow: visible;
+}
+
+/* <canvas id="chart_average"></canvas> */
 
 /* StandardDeviation_part */
 .StandardDeviation_part {
@@ -700,7 +705,7 @@ section > div, .level_box {
 }
 
 .weekness_box {
-    width: 1094px;
+    max-width: 1094px;
     margin: 0 auto;
 }
 
@@ -905,15 +910,37 @@ section > div, .level_box {
 
 
 .balance_graph_all {
+    padding-top: 66px;
     margin: 0 auto;
-    width: 932.66px;
-    height: 1007.72px;
-    background:yellow;
-    margin-bottom: 62.64px;
+    max-width: 932.66px;
+    max-height: 634px;
+    margin-bottom: 54px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 
+/* <canvas id="chart_balance_whole"></canvas> */
+.balance_whole_graph {
+    width: 100%;
+    height: 600px;
+}
+
+
+.balance_idea_graph {
+    
+}
+
+
+
+
+.balance_graph_part {
+
+}
+
+
 .balance_text {
-    width: 1012px;
+    max-width: 1012px;
     margin: 0 auto;
     text-align: left;
     font-weight: 300;
@@ -923,6 +950,7 @@ section > div, .level_box {
     margin-bottom: 40px;
 
 }
+
 
 
 /* recoomend_wrap */
@@ -935,7 +963,7 @@ section > div, .level_box {
 
 .recommend_box {
     padding-top: 14.78px;
-    width: 1094px;
+    max-width: 1094px;
     margin: 0 auto;
     text-align: center;
     padding-bottom:15.28px;
@@ -1075,7 +1103,7 @@ section > div, .level_box {
 
 .next_box {
     position: relative;
-    width: 1094px;
+    max-width: 1094px;
     margin: 0 auto;
     
 }
@@ -1125,9 +1153,20 @@ section > div, .level_box {
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px), screen and (max-height: 700px) and (orientation: landscape){
     /* header */
-    section > div, .level_box, .check_box, .achieving_part,
+    .small_deco {
+        display: none;
+    }
+
+    .big_deco {
+        display: none;
+    }
+    #wrap {
+        overflow: hidden;
+    }
+
+    section > div, .level_part, .level_box, .check_box, .achieving_part, 
     .weekness_box, .next_box, .recommend_box {
         width: 100%;
         margin: 0 auto;
@@ -1152,6 +1191,7 @@ section > div, .level_box {
 
     .student_info > .tbody > tr > td {
         border-right: 5px;
+        padding: 2px;
         font-size: 5.33502px;
         line-height: 8px;
     }
@@ -1177,7 +1217,27 @@ section > div, .level_box {
 
     }
 
+/* detal score_box*/
+
+    .detailscore_tab {
+        width: 100%;
+    }
+
+    .detailscore_tab > thead > tr > th {
+        width: 100%;
+    }
+
+
     /* average_box */
+
+    .balance_graph_all {
+        width: 100%;
+    }
+
+    .balance_whole_graph {
+        width: 80%;
+        margin: 0;
+    }
 
     .average_box > div {
         width: 350px;
@@ -1187,15 +1247,26 @@ section > div, .level_box {
         width: 340px;
     }
 
+    .balance_text{
+        width: 80%;
+        padding: 0 50px;
+        text-align: center;
+    }
+
     /* factoritem_wrap */
     .factors_list {
         height: 100%;
+        align-items: center;
         
     }
 
+
+
     .factors_list > li {
-        font-size: 20px;
-        line-height: 15px;
+        width: 100%;
+        font-size: 18px;
+        padding: 10px 0;
+        line-height: 25px;
     }
 
     .check_box > ul {
@@ -1206,11 +1277,16 @@ section > div, .level_box {
         width: 600px;
     }
 
-    
+    /* balance_box */
+    .balance_box {
+        padding: 0px 0px;
+    }
+
+
 
 }
 
-@media screen and (max-width: 682px){
+@media screen and (max-width: 692px){
     .head_area {
         display: block;
         padding-top: 35px;
@@ -1274,15 +1350,33 @@ section > div, .level_box {
 }
 
 
-@media screen and (max-width: 375px) {
-	#wrap {
-		min-width: 375px;
-	}
-    section > div, .level_box, .check_box, .achieving_part,
+@media screen and (max-width: 375px), screen and (max-height: 375px) and (orientation: landscape){
+    #wrap {
+        overflow: hidden;
+    }
+
+
+    section > div, .level_part, .level_box, .check_box, .achieving_part,
     .weekness_box, .next_box, .recommend_box {
         width: 100%;
         margin: 0 auto;
         text-align: center;
     }
+
+    /*detailscore_tab */
+
+    .detailscore_box {
+        height: 100%;
+
+    }
+    .detailscore_tab {
+        
+    }
+
+    .detailscore_tab > thead > tr > th {
+        width: 100%;
+        line-height: 30px;
+    }
+
 
 }
