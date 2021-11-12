@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/score jquery.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.js" integrity="sha512-CWVDkca3f3uAWgDNVzW+W4XJbiC3CH84P2aWZXj+DqI6PNbTzXbl1dIzEHeNJpYSn4B6U8miSZb/hCws7FnUZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <header class="head_area">
+                        
+                <img class="logo_img" src="./img/tosel_logo.png" alt="">
+                <h1 class="blind">TOSEL Charged score</h1>
+
+                <table class="student_info" summary="학생, 시험 정보">
+                    <caption class="blind">시험 정보</caption>
+                        <thead class="blind"></thead>
+                    
+                        <tbody>
+                            <tr>
+                                <td class="tab_text"><span class="studnet_name">김김김</span></td>
+                                <td class="tab_text"><span class="studnet_birth">2011-01-01</span></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td>수험번호</td>
+                                <td><span class="exam_number">120874987219</span></td>
+                                <td>시험일</td>
+                                <td><span class="exam_date">2021-04-23</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>시험회차</td>
+                                <td><span class="exam_title">TOSEL 제 71회 정기시험</span></td>
+                                <td>유효기간</td>
+                                <td><span class="expire_date">2021-04-23</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot class="blind"></tfoot>
+                    </table>
+            </header>
+        </div>
+
+
+        <div id="container">
+            <section class="level_wrap clearfix">
+                <div class="level_part">
+           
+
+                    <ul class="level_box">
+                        <li>cocoon</li>
+                        <li>prestarter</li>
+                        <li>starter</li>
+                        <li>basic</li>
+                        <li>junior</li>
+                        <li>highjunior</li>
+                        <li>advanced</li>
+                    </ul>
+                    <!-- 흰색 클래스 만들기 -->
+
+                
+                    <div class="score_box">
+    
+                        <div class="score_area">
+                            <div>
+                                <p class="score_title">취득 점수</p>
+                                <p class="score_text"><span class="get_score">000</span></p>
+                            </div>
+                        </div>
+                        
+                        <div class="score_area">
+                            <div>
+                                <p class="score_title">인증 등급</p>
+                                <p class="score_text"><span class="get_rating">0</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+         
+            </section>
+
+        
+
+            <section class="tier_wrap">
+                <div class="tier_box">
+    
+                        <h2 class="tier_title gray_title">YOUR TOSEL TIER IS</h2>
+
+                 
+                        <img class="tier_img" src="./img/tier_img.png" alt="티어이미지">
+                        <!--이미지 삭제해야 함-->
+                        
+
+                        <h3 class="tier_name gold_title">DIAMOND</h3>
+
+                        <div class="tier_nationwide">
+                            <p>전국 상위</p>
+                            <p class="tier_percent"><span class="nationwide_score">8.82%</span></p>
+                        </div>
+
+                        <div class="tier_info">
+                            <p class="tier_celeb">다이아몬드 티어에 도달하신 것을 축하드립니다!</p>
+
+                            <p class="tier_text">플래티넘 티어는 상위 10% 이내에 진입할 경우 도달하실 수 있으며,</p>
+                            <p class="tier_text">상위 5% 이내에 진입할 경우 마스터 티어에 도달하실 수 있습니다.</p>
+                            
+                        </div>
+                        
+                        <p class="tier_about">ABOUT TOSEL TIER</p>
+                        <img class="tier_allimg" src="./img/tier_abouttier.png" alt="">
+                        <p class="tier_about_info">73회 성적표부터 신설된 것으로, 응시자의 랭킹을 퍼센트로 나누어 브론즈부터 챔피언까지의 티어를 배정한 것입니다.<br>
+                            더 높은 티어를 위해 열심히 공부해봅시다!</p>
+                </div>
+
+            </section>
+
+
+
+            <section class="tier_wrap">
+                <div class="ranking_box">
+    
+                        <h2 class="ranking_title gray_title">YOUR RANKING IS</h2>
+
+                        <img class="ranking_img" src="./img/ranking_win.png" alt="">
+
+                        <h3 class="tier_item gold_title">HALL OF FAME</h3>
+
+                        <div class="tier_nationwide tier_raking">
+                            <p>지역구 내</p>
+                            <p class="tier_percent"><span class="nationwide_ranking">000위</span></p>
+                        </div>
+
+                        <div class="tier_info">
+                            <p class="tier_celeb">명예의 전당에 등극하신 것을 축하드립니다!</p>
+
+                            <p class="tier_text">명예의 전당은 지역 상위 10위권 이내에 진입한 경우 등극하실 수 있으며,<br>
+                                QR 코드를 통해 명예의 전당 페이지로 이동하실 수 있습니다.</p>
+                        </div>
+                        
+                </div>
+
+            </section>
+            
+
+            <section class="average_wrap">
+                <div class="average_box">
+    
+                        <h2 class="average_title">LISTENING & SPEAKING</h2>
+
+                        <!-- 전체 평균 ls_overall_score -->
+                        <!-- if (점수 == 10점); ls_over_score left: 50px(10점 x 5px);-->
+                        <!-- if (점수 == 20점); ls_over_score left: 100px(20점 x 5px);-->
+                        <!-- if (점수 == 100점); ls_over_score left: 500px(100점 x 5px);-->
+            
+                        <div>
+                            <div class="overall_average ls_over_score">
+                                <p class="aver_title">전체평균</p>
+                                <div class="aver_cursors"></div>
+                                <div class="aver_pointer"></div>
+                                <p class="aver_score"><span class="ls_overall_score">000</span></p>
+                            </div>
+
+                        <!-- 개인 평균 ls_personal_score -->
+                        <!-- if (점수 == 10점); ls_per_score left: 50px(10점 x 5px);-->
+                        <!-- if (점수 == 20점); ls_per_score left: 100px(20점 x 5px);-->
+                        <!-- if (점수 == 100점); ls_per_score left: 500px(100점 x 5px);-->
+
+                            <div class="personal_average ls_per_score">
+                                <p class="aver_title">내 평균</p>
+                                <div class="aver_pcursors"></div>
+                                <div class="aver_ppointer"></div>
+                                <p class="aver_score"><span class="ls_personal_score">000</span></p>
+                            </div>
+
+                            <div class="aver_bar"></div>
+                        </div>
+
+
+                        <h2 class="average_title">READING & WRITING</h2>
+
+                     
+                        <div>
+
+                        <!-- 전체 평균 rs_overall_score -->
+                        <!-- if (점수 == 10점); rs_over_score left: 50px(10점 x 5px);-->
+                        <!-- if (점수 == 20점); rs_over_score left: 100px(20점 x 5px);-->
+                        <!-- if (점수 == 100점); rs_over_score left: 500px(100점 x 5px);-->
+                            <div class="overall_average rw_over_score">
+                                <p class="aver_title">전체평균</p>
+                                <div class="aver_cursors"></div>
+                                <div class="aver_pointer"></div>
+                                <p class="aver_score"><span class="rw_overall_score">000</span></p>
+                            </div>
+
+                        <!-- 전체 평균 rs_personal_score -->
+                        <!-- if (점수 == 10점); rs_per_score left: 50px(10점 x 5px);-->
+                        <!-- if (점수 == 20점); rs_per_score left: 100px(20점 x 5px);-->
+                        <!-- if (점수 == 100점); rs_per_score left: 500px(100점 x 5px);-->
+                            <div class="personal_average rw_per_score">
+                                <p class="aver_title">내 평균</p>
+                                <div class="aver_pcursors"></div>
+                                <div class="aver_ppointer"></div>
+                                <p class="aver_score"><span class="rw_personal_score">000</span></p>
+                            </div>
+
+                            <div class="aver_bar"></div>
+                        </div>
+                        
+                </div>
+
+            </section>
+
+
+            <section class="detailscore_wrap">
+                <div class="detailscore_box">
+                    <table class="detailscore_tab" summary="상세 성적 정보">
+                        <caption class="blind">상세 성적 정보</caption>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>총점</th>
+                                    <th class="tab_score radius-top">내 점수</th>
+                                    <th>전국평균</th>
+                                    <th>지역평균</th>
+                                    <th>동일 학년</th>
+                                    <th>10% 평균</th>
+                                    <th>30% 평균</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr>
+                                    <td>Section I</td>
+                                    <td>50</td>
+                                    <td class="tab_score"><span class="per_score_sec1">00</span></td>
+                                    <td><span class="nation_score_sec1">0000</span></td>
+                                    <td><span class="region_score_sec1">0000</span></td>
+                                    <td><span class="grade_score_sec1">0000</span></td>
+                                    <td class="big_tabcell"><span class="per10_score"></span></td>
+                                    <td class="big_tabcell"><span class="per30_score"></span></td>
+                                </tr>
+    
+                                <tr>
+                                    <td>Section II</td>
+                                    <td>50</td>
+                                    <td class="tab_score"><span class="get_score_sec2">00</span></td>
+                                    <td><span class="nation_score_sec2">00</span></td>
+                                    <td><span class="region_score_sec2">0000</span></td>
+                                    <td><span class="grade_score_sec2">0000</span></td>
+                                    <td class="big_tabcell" rowspan="2"><span class="per10_score">0000</span></td>
+                                    <td class="big_tabcell" rowspan="2"><span class="per30_score">0000</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>Total</td>
+                                    <td>100</td>
+                                    <td class="tab_score radius-bottom"><span class="get_score">000</span></td>
+                                    <td><span class="nation_score">0000</span></td>
+                                    <td><span class="region_score">0000</span></td>
+                                    <td><span class="grade_score">0000</span></td>
+                        
+                                </tr>
+                            </tfoot>
+                        </table>
+                </div>
+            </section>
+
+
+            <section class="basic_wrap">
+                <div class="basic_box">
+                    <h2 class="basic_title gray_title">BASIC FACTORS</h2>
+                    <p class="basic_instruct">글씨를 클릭해주세요</p>
+                </div>
+            </section>
+
+            <section class="factors_wrap">
+                <div class="factors_box">
+            
+
+                    <ul class="factors_list clearfix">
+                        <li data-target="check_box">틀린 유형 체크</li>
+                        <li data-target="achiving_part">지능 분류에 따른 문항 성취도</li>
+                        <li data-target="average_graph_part">성적과 평균 점수</li>
+                        <li data-target="StandardDeviation_part">표준 편차</li>
+                        <li data-target="strongness_part">강점</li>
+                        <li data-target="weekness_part">약점</li>
+                    </ul>
+
+
+                </div>
+            </section>
+
+
+
+            <section class="factitem_wrap">
+                <div class="factitem_box">
+
+                    <div class="check_box">
+                        <h3 class="check_section">SECTION I</h3>
+
+                        <ul class="check_seclist">
+                            <li>
+                                <h4 class="check_title">PART A</h4>
+                                <p class="check_good">부가의문문에 응대하기</p>
+                                <p class="check_good">제안에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_bad">조동사 의문문에 응대하기</p>
+                                <p class="check_good">평서문에 응대하기</p>
+                            </li>
+
+                            <li>
+                                <h4 class="check_title">PART B</h4>
+                                <p class="check_good">짧은 대화 듣고 대화의 소재 파악하기</p>
+                                <p class="check_good">짧은 대화 듣고 대화의 소재 파악하기</p>
+                                <p class="check_good">짧은 대화 듣고 대화의 소재 파악하기</p>
+                                <p class="check_good">짧은 대화 듣고 대화의 소재 파악하기</p>
+                                <p class="check_bad">조동사 의문문에 응대하기</p>
+                                <p class="check_good">평서문에 응대하기</p>
+                                <p class="check_bad">짧은 대화 듣고 대화의 소재 파악하기</p>
+                                <p class="check_bad">조동사 의문문에 응대하기</p>
+                            </li>
+
+                            <li>
+                                <h4 class="check_title">PART C</h4>
+                                <p class="check_good">부가의문문에 응대하기</p>
+                                <p class="check_good">제안에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                
+                            </li>
+                        </ul>
+
+                        <h3 class="check_section">SECTION II</h3>
+
+                        <ul>
+                            <li>
+                                <h4 class="check_title">PART A</h4>
+                                <p class="check_good">부가의문문에 응대하기</p>
+                                <p class="check_good">제안에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_bad">조동사 의문문에 응대하기</p>
+                                <p class="check_good">평서문에 응대하기</p>
+                            </li>
+
+                            <li>
+                                <h4 class="check_title">PART B</h4>
+                                <p class="check_good">부가의문문에 응대하기</p>
+                                <p class="check_good">제안에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_bad">조동사 의문문에 응대하기</p>
+                                <p class="check_good">평서문에 응대하기</p>
+                                <p class="check_bad">조동사 의문문에 응대하기</p>
+                                <p class="check_bad">조동사 의문문에 응대하기</p>
+                            </li>
+
+                            <li>
+                                <h4 class="check_title">PART C</h4>
+                                <p class="check_good">부가의문문에 응대하기</p>
+                                <p class="check_good">제안에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                
+                            </li>
+
+                            <li>
+                                <h4 class="check_title">PART D</h4>
+                                <p class="check_good">부가의문문에 응대하기</p>
+                                <p class="check_good">제안에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                <p class="check_good">의문사 의문문에 응대하기</p>
+                                
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+                    <div class="achiving_part">
+                        <canvas id="chart_achiving"></canvas>
+                       
+                    </div>
+                    <div class="average_graph_part">
+                        <canvas id="chart_average"></canvas>
+                    </div>
+                    <div class="StandardDeviation_part">
+                        <canvas id="chart_standard"></canvas>
+                    </div>
+                    
+                    <div class="strongness_part">
+                        <div class="weekness_box">
+                            <h3 class="strongness_section"><!-- 데이터가 들어갈 자리입니다. -->Section I : Listening and Speaking</h3>
+                            <h4 class="strongness_area"><!-- 데이터가 들어갈 자리입니다. -->Part C: Listening and Speak</h3>
+                            <p class="strongness_summary"><!-- 데이터가 들어갈 자리입니다. -->평균 정답률 56.8% 의 문제를 맞추셨습니다.</p>
+
+                            <p class="strongness_get"><!-- 데이터가 들어갈 자리입니다. --><span class="student_name">김김김</span> 님은  Section I, Part C: Listening and Speak에서<br>
+                                전체 평균에 비해 우수한 점수를 획득하였습니다.</p>
+
+                            <p class="strongness_abilty"><!-- 데이터가 들어갈 자리입니다. -->대화에 참여하여 상대방의 말을 듣고 이해하여<br>
+                                상황에 적절한 말을 하는 능력이 우수합니다.</p>
+                        </div>
+
+                    </div>
+                    <div class="weekness_part">
+                        <div class="weekness_box">
+                            <h3 class="weekness_section"><!-- 데이터가 들어갈 자리입니다. -->Section I : Listening and Speaking</h3>
+                            <h4 class="weekness_area"><!-- 데이터가 들어갈 자리입니다. -->Part C: Listening and Speak</h3>
+                            <p class="weekness_summary"><!-- 데이터가 들어갈 자리입니다. -->평균 정답률 56.8% 의 문제를 맞추셨습니다.</p>
+
+                            <p class="weekness_get"><!-- 데이터가 들어갈 자리입니다. --><span class="student_name">김김김</span> 님은  Section I, Part C: Listening and Speak에서<br>
+                                전체 평균에 비해 우수한 점수를 획득하였습니다.</p>
+
+                            <p class="weekness_abilty"><!-- 데이터가 들어갈 자리입니다. -->대화에 참여하여 상대방의 말을 듣고 이해하여<br>
+                                상황에 적절한 말을 하는 능력이 우수합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        
+
+
+            <section class="premium_wrap">
+                <div class="premium_box">
+                    <h2 class="premium_title gold_title">PREMIUM FACTORS</h2>
+
+                    <h3 class="evaluation_title gray_title">PERFORMANCE EVALUATION</h3>
+                    
+
+                    <div class="graph_performance_evaluation">
+                        <canvas id="myChartOne"></canvas>
+                    </div>
+
+
+                    <p class="premium_text">이전 응시 점수는 TOSEL Index에 기반하여 현재 응시한 레벨에 맞는 점수로 변환되었습니다.<br>
+                        보다 정확한 점수 예측을 위해 꾸준한 시험 응시가 필요합니다.</p>
+    
+    
+                    <p class="premium_expect">이전 응시 점수에 기반하여 앞으로의 점수를 예측한 결과, <span class="student_name"></span> 님은 <span class="next_test"></span>회 TOSEL 시험에서 <span class="expect_score"></span>점을 기록할 것으로 예상됩니다.</p>
+                </div>
+
+                
+        
+            </section>
+
+
+
+            <section class="distractors_wrap">
+                <div class="distractors_box">
+                    <h2 class="distractors_title gray_title">TOP 3 DISTRACTORS</h2>
+
+                    <p class="distractors_text"><span class="student_name"></span> 님이 가장 많이 틀린 오답 선택지 유형 TOP 3를 알려드립니다.<br>
+                        해당 선택지 유형을 위주로 학습을 보충하시면, 더욱 뛰어난 성취를 이룰 수 있을 것으로 예상됩니다.</p>
+
+                    <div class="wrong_question">
+                        <h3 class="wrong_title first_wrong gold_title gold_title">01. 선택문에 적절하지 않은 대답</h3>
+                        <h4 class="wrong_section first_wrong_section gold_title">SECTION I : LISTENING & SPEAKING</h3>
+                        <p class="wrong_reason">선택문의 의미와 맞지 않는 선택지를 골랐습니다.</p>
+                        <p class="wrong_solution">듣기 및 말하기 연습을 통해 선택문의 의미와 그에 따른 적절한 답을 학습해보세요.</p>
+                    </div>
+
+                    <div class="wrong_question">
+                        <h3 class="wrong_title first_wrong gold_title gold_title">01. 선택문에 적절하지 않은 대답</h3>
+                        <h4 class="wrong_section first_wrong_section gold_title">SECTION I : LISTENING & SPEAKING</h3>
+                        <p class="wrong_reason">선택문의 의미와 맞지 않는 선택지를 골랐습니다.</p>
+                        <p class="wrong_solution">듣기 및 말하기 연습을 통해 선택문의 의미와 그에 따른 적절한 답을 학습해보세요.</p>
+                    </div>
+
+
+                    <div class="wrong_question">
+                        <h3 class="wrong_title first_wrong gold_title gold_title">01. 선택문에 적절하지 않은 대답</h3>
+                        <h4 class="wrong_section first_wrong_section gold_title">SECTION I : LISTENING & SPEAKING</h3>
+                        <p class="wrong_reason">선택문의 의미와 맞지 않는 선택지를 골랐습니다.</p>
+                        <p class="wrong_solution">듣기 및 말하기 연습을 통해 선택문의 의미와 그에 따른 적절한 답을 학습해보세요.</p>
+                    </div>
+        
+            </section>
+
+
+
+
+
+
+
+            <section class="balance_wrap">
+                <div class="balance_box">
+                    <h2 class="balance_title gray_title">LRSW Balance</h2>
+
+                    <ul class="balance_list">
+                        <li class="item_blue">나의 밸런스</li>
+                        <li class="item_green">같은 지역 평균 밸런스</li>
+                        <li class="item_purple">전국 평균 밸런스</li>
+                    </ul>
+
+                    <div class="balance_graph_all">
+                        <div class="balance_graph_whole_part">
+                            <div class="balance_whole_graph">
+                                <canvas id="chart_balance_whole"></canvas>
+                            </div>
+                            <div class="balance_idea_graph">
+                                <canvas id="chart_balance_idea"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="balance_graph_part">
+                            <div><canvas id="chart_balance_idea"></canvas></div>
+                        </div>
+                    </div>
+                    <div class="balance_text">
+                        <p class="">김김김 님의 LRSW 밸런스 입니다. 같은 지역의 평균 LRSW 그래프에 비해 Reading 영역이 다소 부족하며, Listening 영역과 Writing 영역에서 뛰어난 모습을 보입니다. </p>
+                        <p class="">또한 전국 평균 LRSW 그래프에 비해 Redaing 영역과 Speaking 영역, Writing 영역이 다소 부족하며 Listening 영역에서 뛰어난 모습을 보입니다.</p>
+                    </div>
+
+                    <div class="balance_text">
+                        <p class="">김김김 님의 향후 LRSW 밸런스 조절을 위해 Reading 영역, Speaking 영역 중심의 학습이 필요합니다.</p>
+                        <p class="">Reading  영역, Speaking 영역 위주의 학습을 6개월 간 진행할 경우 보다 이상적인 LRSW 밸런스 그래프를 그릴 수 있을 것으로 예상됩니다.</p>
+                    </div>
+                    
+                </div>
+
+
+
+        
+            </section>
+
+
+
+            <section class="section_wrap">
+                
+                <h2 class="section_title gray_title">Section Balance</h2>
+                
+                <div class="section_box">
+                    
+                    <h3 class="section_subtitle gold_title">Section I : Listening & Speaking</h3>
+
+                
+                    <div class="section1_graph">
+                        <div><canvas id="chart_sec1"></canvas></div>
+                    </div>
+
+                    <div class="section1_question">
+                        <h3 class="section1_title first_section1 gold_title">PART A. Listen and Respond</h3>
+                        <p class="section1_section first_section1_section gray_title">문장을 듣고, 화자가 하는 말의 핵심을 파악하여 다음에 이어질<br>
+                            알맞은 대답을 고르는 파트입니다.</p>
+                        <div class="section1_weekness">
+                            <p class="section1_text">조동사 의문문에 응대하기</p>
+                        </div>
+                       
+                    </div>
+
+                    <div class="section1_question">
+                        <h3 class="section1_title first_section1 gold_title gold_title">PART B. Listen and Retell</h3>
+                        <h4 class="section1_section first_section1_section gray_title">두 사람의 대화 또는 짧은 이야기를 듣고, 내용을 바르게 이해하여<br>
+                            주어진 문제에 알맞은 응답을 고르는 파트입니다.</h3>
+                        <div class="section1_weekness">
+                            <p class="section1_text">짧은 대화 듣고 대화의 상황 파악하기</p>
+                            <p class="section1_text">짧은 대화 듣고 대화의 상황 파악하기</p>
+                            <p class="section1_text">짧은 대화 듣고 대화의 상황 파악하기</p>
+                        </div>
+                    </div>
+
+                    <div class="section1_question">
+                        <h3 class="section1_title first_section1 gold_title gold_title">PART C. Listen and Retell</h3>
+                        <h4 class="section1_section first_section1_section gray_title">두 사람의 대화를 듣고, 내용에 대한 종합적인 이해를 바탕으로 대화에<br> 참여하여 마지막 말에 이어질 알맞은 대답을 고르는 파트입니다.</h3>
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="recommend_wrap">
+                    <div class="recommend_box">
+                            <h2 class="recommend_title">RECOMMENDATION</h2>
+                            <p class="recommend_who"><span class="student_name"></span> 님에게는 이 교재를 추천합니다.</p>
+                            
+                            <div class="reco_book">
+                            <img src="" alt="추천교재">
+                            <img src="" alt="추천교재">
+                            <!-- 추천해주는 교재에 따라서 달라짐-->
+                            </div>
+    
+                            <p class="reco_btitle"><span class="book_title bold"></span></p>
+    
+                            <p class="reco_text"><span class="book_title bold"></span>정답률 분석을 통한
+                            심화문제 유형 및 만점전략을 제시합니다.</p>
+                            
+
+                            <p class="reco_text reco_secondtext">
+                            해당 교재에 수록되어 있는<br>
+                            <span class="book_chapter">CHAPTER 2의 UNIT 02</span>를 위주로 학습하시면
+                            좋은 결과를 낼 것으로 기대됩니다.</p>
+                            
+                    </div>
+                </div>
+
+
+                <div class="section_box">
+                    
+                    <h3 class="section_subtitle gold_title">Section II : Reading & Writing</h3>
+
+                
+                    <div class="section1_graph">
+                        <div><canvas id="chart_sec2"></canvas></div>
+                    
+                    </div>
+
+                    <div class="section1_question">
+                        <h3 class="section1_title first_section1 gold_title">PART A. Sentence Completion</h3>
+                        <p class="section1_section first_section1_section gray_title">문장을 듣고, 화자가 하는 말의 핵심을 파악하여 다음에 이어질<br>
+                            알맞은 대답을 고르는 파트입니다.</p>
+                        <div class="section1_weekness">
+                            <p class="section1_text">동사의 형태 고르기</p>
+                        </div>
+                       
+                    </div>
+
+
+                    <div class="section1_question">
+                        <h3 class="section1_title first_section1 gold_title">PART B. Situational Writing</h3>
+                        <p class="section1_section first_section1_section gray_title">두 사람의 대화 또는 짧은 이야기를 듣고, 내용을 바르게 이해하여<br>
+                            주어진 문제에 알맞은 응답을 고르는 파트입니다. </p>
+                        <div class="section1_weekness">
+                            <p class="section1_text">동작 묘사</p>
+                            <p class="section1_text">상황 묘사</p>
+                            <p class="section1_text">위치 묘사</p>
+                            <p class="section1_text">실용 소재 그림 분석</p>
+                        </div>
+                       
+                    </div>
+
+                    <div class="section1_question">
+                        <h3 class="section1_title first_section1 gold_title">PART C. Practical Reading and Retelling</h3>
+                        <p class="section1_section first_section1_section gray_title">두 사람의 대화를 듣고, 내용에 대한 종합적인 이해를 바탕으로 대화에<br> 참여하여 마지막 말에 이어질 알맞은 대답을 고르는 파트입니다.</p>
+                        <div class="section1_weekness">
+                            <p class="section1_text">홍보문 파악하기</p>
+                            <p class="section1_text">광고문 파악하기</p>
+                            <p class="section1_text">숫자 관련 정보 분석하기</p>
+                        </div>
+                    </div>
+
+
+                    <div class="section1_question">
+                        <h3 class="section1_title first_section1 gold_title">PART D. General Reading and Retelling</h3>
+                        <p class="section1_section first_section1_section gray_title">두 사람의 대화를 듣고, 내용에<br> 대한 종합적인 이해를 바탕으로 대화에 참여하여 마지막 말에 이어질 알맞은 대답을 고르는 파트입니다.</p>
+                        <div class="section1_weekness">
+                            <p class="section1_text">지문의 제목과 요지 파악하기</p>
+                            <p class="section1_text">지문에서 구체적인 사실 정보 찾기</p>
+                        </div>
+                    </div>
+
+                
+
+                </div>
+
+
+                <div class="recommend_wrap">
+                    <div class="recommend_box">
+                            <h2 class="recommend_title">RECOMMENDATION</h2>
+                            <p class="recommend_who"><span class="student_name"></span> 님에게는 이 교재를 추천합니다.</p>
+                            
+                            <div class="reco_book">
+                            <img src="" alt="추천교재">
+                            <img src="" alt="추천교재">
+                            <!-- 추천해주는 교재에 따라서 달라짐-->
+                            </div>
+    
+                            <p class="reco_btitle"><span class="book_title bold"></span></p>
+    
+                            <p class="reco_text"><span class="book_title bold"></span>정답률 분석을 통한
+                            심화문제 유형 및 만점전략을 제시합니다.</p>
+                            
+
+                            <p class="reco_text reco_secondtext">
+                            해당 교재에 수록되어 있는<br>
+                            <span class="book_chapter">CHAPTER 2의 UNIT 02</span>를 위주로 학습하시면
+                            좋은 결과를 낼 것으로 기대됩니다.</p>
+                            
+                    </div>
+                </div>
+        
+            </section>
+
+            
+
+
+
+
+
+
+        
+
+
+
+        </div>
+
+
+        <div id="footer">
+            <footer class="footer_box">
+
+                <div class="next_box">
+                    <a href="">
+                        <button class="next_question">
+                            <h2 class="next_text">지금 바로 틀린 문제 유형 풀어보기</h2>
+                        </button>
+                    </a>
+                <div class="big_deco"></div>
+                <div class="small_deco"></div>
+                </div>
+
+                
+
+        
+            </footer>
+        </div>
+    </div>
+    <script>
+        // $('.factors_list').children().click(function() {
+        //     $(this).css({"color":"#FFFFFF"});
+        //     $(this).siblings().css({"color":"#262626"});
+        // })
+
+
+// togle 
+
+        // $(document).on("click", ".factors_list > li", function(){
+        //     $(this).toggleClass('.white');
+        // })
+
+
+        $(document).on("click", ".factors_list > li", function(){
+            // if($(this).hasClass){
+            //     $(this).css({"color":"#ffffff"});
+            // } else {
+            //     $(this).css({"color":"#FFFFFF"});
+            // }
+            $(this).toggleClass('white');
+            $(this).not().siblings().removeClass('white');
+            var target = $(this).data("target");
+            $("."+target).fadeToggle();
+            $("."+target).siblings().css({"display":"none"})
+        });
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// chart
+
+// let gradientStroke = c.createLinearGradient(0, 0, 0, 500);
+//         gradientStroke.addColorStop(0, "#7DD6F8");
+//         gradientStroke.addColorStop(0.41, "#7DD6F8");
+//         gradientStroke.addColorStop(1, "rgba(125, 214, 248, 0.2)");
+
+
+        function drawLineChart(chartId, myLabels, changeGrade, myOption){
+        let ctx = document.getElementById(chartId);
+        let c = ctx.getContext('2d');
+        let gradientStroke = c.createLinearGradient(0, 0, 0, 500);
+        gradientStroke.addColorStop(0, "#7B7CF8");
+        gradientStroke.addColorStop(0.5, "#4ADEDE");
+        gradientStroke.addColorStop(1, "#4ADEDE");
+        let chart = new Chart(c, {
+            type: "line",
+            data: {
+                labels : myLabels,
+                datasets: [{
+                backgroundColor: gradientStroke,
+                data: changeGrade,
+                label: '', 
+                borderWidth: 0,
+                borderColor: '#7DD6F8',
+                pointRadius : 0,
+                fontweight: 'bold', 
+            }]
+            }, 
+            options: myOption,
+            
+        })
+    }
+
+    let my_label = ['66회', '기관', '67회', '68회', '69회', '70회', '71회', 'Next'];
+    let change_grade = [50, 60, 80, 80, 70, 80, 77, 100];
+    let my_option = {
+        reponsive: true, 
+        scales: {
+            xAxes: [{
+                display: true,
+                gridLines: {
+                    color: "rgba(0, 0, 0, 0)",
+                },
+                ticks: {
+                    lineWidth: 1,
+                    fontSize: 11,
+                    fontColor: '#FFFFFF',
+                    fontweight:11,
+                },
+            }],
+            yAxes: [{
+                display: true,
+                ticks: {
+                    max: 100,
+                },
+                gridLines: {
+                    color: "#454545",
+                    },
+            }],
+        },
+        title: {
+            display: false,
+        },
+        legend: {
+            display: false,
+        },
+        tooltips : {
+            enabled : false,
+        },
+    }
+
+
+    // let gradientStroke = c.createLinearGradient(0, 0, 0, 500);
+    //     gradientStroke.addColorStop(0, "#7B7CF8");
+    //     gradientStroke.addColorStop(0.41, "#7DD6F8");
+    //     gradientStroke.addColorStop(1, "rgba(74, 222, 222, 0.5)");
+
+    drawLineChart('myChartOne', my_label, change_grade, my_option);
+
+
+    let standard_label = ['자연친화지능', '인간친화지능', '자기실천지능', '신체운동지능', '공간지능', '음악지능', '논리수학지능', '언어지능'];
+    let standard_grade = [50, 60, 80, 90, 100, 90, 60, 50]
+    let standard_option = {
+        reponsive: true, 
+        scales: {
+            xAxes: [{
+                display: true,
+                gridLines: {
+                    color: "#454545",
+                    borderDash: [10, 5],
+                },
+                ticks: {
+                    lineWidth: 1,
+                    fontSize: 11,
+                    fontColor: '#FFFFFF',
+                    fontweight:11,
+                },
+            }],
+            yAxes: [{
+                display: false,
+                gridLines: {
+                    color: "#454545",
+                    },
+            }],
+        },
+        title: {
+            display: false,
+        },
+        legend: {
+            display: false,
+        },
+        tooltips : {
+            enabled : false,
+        },
+    }
+
+
+    drawLineChart('chart_standard', standard_label, standard_grade, standard_option);
+
+    function drawBarChart(chartId, data){
+        let ach = document.getElementById(chartId);
+        let ach_chart = ach.getContext('2d');
+        let newChart = new Chart(ach_chart, {
+            type: 'bar',
+            data: data,
+            options: {
+                legend: {
+                    display:false,
+                },
+                scales: {
+                yAxes:[{
+                    display: false,
+                    ticks:{
+                    max: 100,
+                    min: 10,
+                    }
+                }],
+                }
+            },
+        })
+    };
+
+
+    let ach_data = {
+  labels: ['자연친화지능', '인간친화지능', '자기실천지능', '신체운동지능', '공간지능', '음악지능', '논리수학지능', '언어지능'],
+  datasets: [{
+    label: '지능 분류에 따른 분항 성취도',
+    data: [80, 50, 30, 60, 80, 60, 30, 40],
+    backgroundColor: [
+      '#4ADEDE',
+      '#7B7CF8',
+      '#FB5959',
+      '#7B7CF8',
+      '#4ADEDE',
+      '#7B7CF8',
+      '#FB5959',
+      '#7B7CF8',
+    ],
+    borderRadius: 10,
+  }]
+};
+
+    drawBarChart('chart_achiving', ach_data)
+        
+        
+
+    function drawBubbleChart(chartId, data){
+        let ach = document.getElementById(chartId);
+        let ach_chart = ach.getContext('2d');
+        let newChart = new Chart(ach_chart, {
+        type: 'bubble',
+        data: data,
+        options: {
+            legend: false,
+            yAxes: {
+                ticks:{
+                    min: 0,
+                    max: 100,
+                }
+            }
+        }
+        })
+    }
+
+
+    let aver_data = {
+  datasets: [{
+    label: '성적과 평균 점수',
+    data: [{
+      x: 9,
+      y: 30,
+      r: 50
+    }, {
+      x: 30,
+      y: 20,
+      r: 45,
+    }, {
+      x: 20,
+      y: 3,
+      r: 50,
+    }, {
+      x: 10,
+      y: 40,
+      r: 40,
+    }, {
+      x: 14,
+      y: 10,
+      r: 40,
+    }],
+    backgroundColor: [
+    '#7DD6F8',
+      '#DEF4FD',
+      '#DEF4FD',
+      '#DEF4FD',
+      '#DEF4FD',
+    ],
+    borderRadius: 10,
+  }]
+};
+
+
+    drawBubbleChart('chart_average', aver_data)
+
+    function drawRadarChart(chartId, data){
+        let ach = document.getElementById(chartId);
+        let ach_chart = ach.getContext('2d');
+        let newChart = new Chart(ach_chart, {
+            type: 'radar',
+            data: data,
+            options: {
+                plugins: {
+                    legend: {
+                        display: false,
+                        labels: {
+                    // This more specific font property overrides the global property
+                            font: {
+                                size: 30,
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    r: {
+                        grid: {
+                            display: true,
+                            color: '#4A4A4A',
+                            lineWidth: 0.5,
+                            
+                        },
+                        pointLabels: {
+                            color: '#ffffff',
+                            lineWidhth: 10,
+                        },
+                        display: true,
+                        angleLines: {
+                            display: true,
+                            color: '#FFFFFF',
+                            lineWidth: 0.5,
+                            fontSize: 12,
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 30,
+                        ticks: {
+                            display: false,
+                        },
+                    },
+
+                },
+                }
+            })   
+    }
+
+    let bwhole_data = {
+        labels: [
+            'L',
+            'R',
+            'W',
+            'S'
+        ],
+        datasets: [{
+            label: '나의 밸런스',
+            data: [25, 25, 25, 25],
+            fill: false,
+            backgroundColor: 'rgba(26, 167, 236, 0.1)',
+            borderColor: '#7DD6F8',
+            borderWidth: 1,
+            pointBackgroundColor: '#333333',
+            pointBorderColor: '#333333',
+            pointHoverBackgroundColor: '#',
+            pointHoverBorderColor: '#333333',
+            pointRadius: 0,
+        }, {
+            label: '같은 지역 평균 밸런스',
+            data: [22, 22, 22, 22],
+            fill: true,
+            backgroundColor: 'rgba(74, 222, 222, 0.1)',
+            borderColor: '#4ADEDE',
+            borderWidth: 1,
+            pointBackgroundColor: 'rgb(54, 162, 235)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(54, 162, 235)',
+            pointRadius : 0,
+        }, {
+            label: '전국 평균 밸런스',
+            data: [15, 15, 18, 18],
+            fill: true,
+            backgroundColor: 'rgba(123, 124, 248, 0.1)',
+            borderColor: '#7B7CF8',
+            borderWidth: 1,
+            pointBackgroundColor: 'rgb(54, 162, 235)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(54, 162, 235)',
+            pointRadius : 0,
+        }]
+        };
+
+        let sec2_data = {
+        labels: [
+            'Part A',
+            'Part B',
+            'Part C',
+            'Part D'
+        ],
+        datasets: [{
+            label: '나의 밸런스',
+            data: [25, 25, 25, 25],
+            fill: true,
+            backgroundColor: 'rgba(74, 222, 222, 0.35)',
+            borderColor: '#4ADEDE',
+            borderWidth: 1,
+            pointBackgroundColor: '#333333',
+            pointBorderColor: '#333333',
+            pointHoverBackgroundColor: '#',
+            pointHoverBorderColor: '#333333',
+            pointRadius: 0,
+        }, {
+            label: '같은 지역 평균 밸런스',
+            data: [22, 22, 22, 22],
+            fill: true,
+            backgroundColor: 'rgba(123, 124, 248, 0.35)',
+            borderColor: '#7B7CF8',
+            borderWidth: 1,
+            pointBackgroundColor: 'rgb(54, 162, 235)',
+            pointBorderColor: '#fff',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: 'rgb(54, 162, 235)',
+            pointRadius : 0,
+        }]
+        };
+
+
+drawRadarChart('chart_balance_whole', bwhole_data);
+drawRadarChart('chart_sec2', sec2_data )
+// drawRadarChart('chart_balance_idea', bwhole_data);
+
+
+
+    //     $('.factors_list').children().eq(0).click(function(){
+    //     $('.check_box').fadeIn();
+    //     $('.check_box').siblings().fadeOut()
+    // });
+
+    // $('.factors_list').children().eq(1).click(function(){
+    //     $('.achiveing_part').fadeIn();
+    //     $('.achiveing_part').siblings().fadeOut()
+    // });
+
+    // $('.factors_list').children().eq(2).click(function(){
+    //     $('.average_graph_part').fadeIn();
+    //     $('.average_graph_part').siblings().fadeOut()
+    // });
+  
+  
+    // $('.factors_list').children().eq(3).click(function(){
+    //     $('.StandardDeviation_part').fadeIn();
+    //     $('.StandardDeviation_part').siblings().fadeOut()
+    // });
+
+    // $('.factors_list').children().eq(4).click(function(){
+    //     $('.strongness_part').fadeIn();
+    //     $('.strongness_part').siblings().fadeOut()
+    // });
+
+    // $('.factors_list').children().eq(5).click(function(){
+    //     $('.weekness_part').fadeIn();
+    //     $('.weekness_part').siblings().fadeOut()
+    // });
+
+
+
+
+
+//<div class="factitem_box">
+
+
+        //<div class="check_box">
+        // <div class="achiveing_part">
+           
+        // <div class="average_graph_part">
+                       
+        // <div class="StandardDeviation_part">
+                       
+        // <div class="strongness_part">
+                     
+        // <div class="weekness_part">
+                    
+//<ul class="factors_list clearfix">
+
+            // <li>틀린 유형 체크</li>
+            //             <li>지능 분류에 따른 문항 성취도</li>
+            //             <li>성적과 평균 점수</li>
+            //             <li>표준 편차</li>
+            //             <li>강점</li>
+            //             <li>약점</li>
+           
+    </script>
+</body>
+</html>
