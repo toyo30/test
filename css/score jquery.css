@@ -1215,11 +1215,7 @@ section > div {
 }
 
 @media screen and (max-width: 1000px), screen and (max-height: 1000px) and (orientation: landscape){
-    .balance_graph_all{
-        
-    }
 
-    .balance_whole
     
 }
 
@@ -1271,6 +1267,12 @@ section > div {
         height: 36.44px;
     }
 
+    /* tier_wrap */
+    .tier_about_info {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
     /* level_wrap */
 
     .level_box {
@@ -1311,11 +1313,10 @@ section > div {
     }
 
     .aver_bar {
-        width: 340px;
+        width: 300px;
     }
 
     .balance_text{
-        width: 80%;
         padding: 0 50px;
         text-align: center;
     }
@@ -1341,14 +1342,32 @@ section > div {
     }
 
     .check_seclist {
-        width: 600px;
+        /* width: 600px; */
+    }
+
+
+    /* premium_box */
+
+    .premium_text, .premium_expect {
+        padding: 0 20px;
+        word-break: break-all;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 11px;
+    }
+
+    .distractors_text {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+    /* distractors_wrap */
+    .wrong_solution {
+        padding: 0 20px;
+        box-sizing: border-box;
     }
 
     /* balance_box */
-    .balance_box {
-        
-    }
-
+   
     /* achiving_part */
     .achiving_part {
         padding: 88px 0px 140px 0px;
@@ -1363,6 +1382,11 @@ section > div {
         margin: 0 auto;
     }
     
+    /* section box */
+    .section1_section {
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
 
 
 
@@ -1400,7 +1424,7 @@ section > div {
     }
 
     .check_seclist {
-        width: 300px;
+        /* width: 300px; */
     }
 
     .check_box > ul {
@@ -1474,9 +1498,6 @@ section > div {
         height: 100%;
 
     }
-    .detailscore_tab {
-        
-    }
 
     .detailscore_tab > thead > tr > th {
         width: 100%;
@@ -1484,5 +1505,32 @@ section > div {
         font-size: 11px;
     }
 
+    /* */
+    .check_box > ul > li {
+        width: 100%;
+    }
+
+    .check_title {
+        width: 200px;
+    }
+
+}
+
+@media screen and (max-width: 385px), screen and (max-height: 385px) and (orientation: landscape){
+    .detailscore_tab > thead > tr > th {
+        width: 100%;
+        line-height: 30px;
+        font-size: 11px;
+    }
+
+}
+
+@media screen and (max-width: 350px), screen and (max-height: 350px) and (orientation: landscape){
+    .detailscore_tab > thead > tr > th {
+        width: 100%;
+        line-height: 30px;
+        font-size: 9px;
+    }
+    
 
 }
