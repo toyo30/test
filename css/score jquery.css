@@ -113,13 +113,21 @@ a:hover, a:active{
 
 
 /* container layout*/
-section > div, .level_box {
-    max-width: 1094px;
-    margin: 0 auto;
+section > div {
     text-align: center;
 }
 
+.level_box {
+    width: 100%;
+}
 
+.factitem_box {
+    width: 100%;
+}
+
+.strongness_part {
+    width: 100%;
+}
 
 /* header */
 .head_area {
@@ -516,7 +524,7 @@ section > div, .level_box {
 .factors_list {
     display: flex;
     justify-content: space-around;
-    height: 55px;
+    height: 100%;
     color: #262626;
 }
 
@@ -531,6 +539,7 @@ section > div, .level_box {
 
 /* factitem_box */
 
+
 .factitem_box {
     width: 100%;
     text-align: center;  
@@ -539,7 +548,7 @@ section > div, .level_box {
 
 /* check_box */
 
-.check_box {
+.check_box, .achiving_part, .average_graph_part, .StandardDeviation_part{
     display: none;
     max-width: 1094px;
     margin: 0 auto;
@@ -610,12 +619,12 @@ section > div, .level_box {
 }
 
 
-/* achieving_part */
+/* achiving_part */
 
 .achiving_part {
     padding: 88px 70px 140px 70px;
     display: none;
-    max-width: 1000px;
+    max-width: 920px;
     margin: 0 auto;
 }
 
@@ -648,6 +657,7 @@ section > div, .level_box {
 
 /* strongness_part */
 .strongness_part {
+    width: 100%;
     display: none;
     margin-top: 102.11px;
     padding-top: 46.52px;
@@ -658,7 +668,7 @@ section > div, .level_box {
 }
 
 .strongness_section {
-    font-weight: bold;
+    font-weight: bold; 
     font-size: 16px;
     line-height: 23px;
     margin-bottom: 6px;
@@ -695,6 +705,7 @@ section > div, .level_box {
 
 
 .weekness_part {
+    width: 100%;
     display: none;
     margin-top: 102.11px;
     padding-top: 46.52px;
@@ -762,8 +773,8 @@ section > div, .level_box {
 
 .graph_performance_evaluation {
     margin: 0 auto;
-    width: 706.84px;
-    height: 529.3px;
+    max-width: 706.84px;
+    max-height: 529.3px;
     margin-bottom: 42px;
 }
 
@@ -852,7 +863,7 @@ section > div, .level_box {
 
 .balance_list {
     display: flex;
-    width: 702.95px;
+    max-width: 702.95px;
     height: 29px;
     text-align: center;
     justify-content: space-around;
@@ -910,26 +921,76 @@ section > div, .level_box {
 
 
 .balance_graph_all {
-    padding-top: 66px;
     margin: 0 auto;
-    max-width: 932.66px;
-    max-height: 634px;
+    max-width: 995px; 
+    height: 100%;
     margin-bottom: 54px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
+    box-sizing: border-box;
+    padding: 66px 30px 0px 30px;
 }
 
 /* <canvas id="chart_balance_whole"></canvas> */
-.balance_whole_graph {
-    width: 100%;
-    height: 600px;
+.balance_graph_whole_part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
 }
 
+.balance_whole_graph {
+    flex: 0 0 auto;
+    width: 64%;
+    max-width: 603px;
+    padding-top: 30px;
+}
 
 .balance_idea_graph {
-    
+    flex: 0 0 auto;
+    width: 27%;
+    max-width: 330px;
+    margin-bottom: 27.6px;
 }
+
+.part_test {
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    color: #8A8A8A;
+}
+
+
+.balance_graph_part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.part_chart {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 auto;
+    width: 60%;
+    padding-top: 33px;
+}
+
+.part_chart_last, .part_chart_prev {
+    flex: 0 0 auto;
+    width: 45%;
+ 
+}
+
+.part_next {
+    padding-bottom: 24.29px;
+}
+
+.part_chart_next {
+    flex: 0 0 auto;
+    width: 27%;
+    
+
+}
+
 
 
 
@@ -1045,8 +1106,11 @@ section > div, .level_box {
 
 .section1_graph {
     margin: 0 auto;
-    width: 444.22px;
-    height: 410.41px;
+    max-width: 484.22px;
+    max-height: 450.41px; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0 20px;
 }
 
 .section1_title {
@@ -1148,10 +1212,16 @@ section > div, .level_box {
     background-size: contain;
     bottom: -40px;
     right: -540px;
-
 }
 
+@media screen and (max-width: 1000px), screen and (max-height: 1000px) and (orientation: landscape){
+    .balance_graph_all{
+        
+    }
 
+    .balance_whole
+    
+}
 
 @media screen and (max-width: 768px), screen and (max-height: 700px) and (orientation: landscape){
     /* header */
@@ -1166,10 +1236,10 @@ section > div, .level_box {
         overflow: hidden;
     }
 
-    section > div, .level_part, .level_box, .check_box, .achieving_part, 
+    section > div, .level_part, .level_box, .check_box, .achiving_part, 
     .weekness_box, .next_box, .recommend_box {
         width: 100%;
-        margin: 0 auto;
+        margin: 0 auto; 
         text-align: center;
     }
 
@@ -1234,10 +1304,7 @@ section > div, .level_box {
         width: 100%;
     }
 
-    .balance_whole_graph {
-        width: 80%;
-        margin: 0;
-    }
+    
 
     .average_box > div {
         width: 350px;
@@ -1279,8 +1346,23 @@ section > div, .level_box {
 
     /* balance_box */
     .balance_box {
-        padding: 0px 0px;
+        
     }
+
+    /* achiving_part */
+    .achiving_part {
+        padding: 88px 0px 140px 0px;
+        display: none;
+        max-width: 920px;
+        margin: 0 auto;
+    }
+
+    .StandardDeviation_part{
+        padding: 88px 0px 140px 0px;
+        max-width: 920px;
+        margin: 0 auto;
+    }
+    
 
 
 
@@ -1292,6 +1374,10 @@ section > div, .level_box {
         padding-top: 35px;
         padding-bottom: 20px;
         height: 100%;
+    }
+
+    .level_box > li {
+        font-size: 12px;
     }
 
     .logo_img {
@@ -1331,7 +1417,7 @@ section > div, .level_box {
     }
 
     .check_box > ul > li > p {
-        margin-left: 50px;
+        padding: 0 20px;
     }
 
     .next_question {
@@ -1339,12 +1425,28 @@ section > div, .level_box {
         height: 73.62px;
     }
 
+
+    /* blance_wrap */
+
+    .balance_list {
+        flex-wrap: wrap;
+        height: 100%;
+        margin-bottom: 50px;
+    }
+
+    .balance_list > li + li {
+        margin-top: 50px;
+    }
+
+
     .next_text {
         font-size: 12.8041px;
         line-height: 19px;
         background: url(../img/footer_next.png) no-repeat top 50% right 30px;
         background-size: 18px 18px;
     }
+
+    
 
 
 }
@@ -1356,13 +1458,16 @@ section > div, .level_box {
     }
 
 
-    section > div, .level_part, .level_box, .check_box, .achieving_part,
+    section > div, .level_part, .level_box, .check_box, .achiving_part,
     .weekness_box, .next_box, .recommend_box {
         width: 100%;
         margin: 0 auto;
         text-align: center;
     }
 
+    .level_box {
+        margin-bottom: 30px;
+    }
     /*detailscore_tab */
 
     .detailscore_box {
@@ -1376,6 +1481,7 @@ section > div, .level_box {
     .detailscore_tab > thead > tr > th {
         width: 100%;
         line-height: 30px;
+        font-size: 11px;
     }
 
 
