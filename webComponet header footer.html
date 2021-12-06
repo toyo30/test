@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교재몰</title>
+</head>
+<body>
+  <div id="wrap">
+    <div id="header">
+      <custom-header></custom-header>
+    </div>
+    <div id="footer">
+      <custom-footer></custom-footer>
+    </div>
+  </div>
+
+
+
+<template id="templateHeader">
+<header class="head-area">
+    <div class="logo-area">
+        <img src="../static/logo-img.png" alt="로고 이미지">
+    </div>
+
+    <ul class="nav-list">
+        <li class="nav-item">마이 페이지</li>
+        <li class="nav-item">공지사항</li>
+        <li class="nav-item">FAQ</li>
+        <li class="nav-item">장바구니</li>
+        <li class="nav-item"></li>
+    </ul>
+</header>
+<style>
+.head-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    height: 5.208vw;
+    margin: 0 auto;
+}
+
+.logo-area {
+    width: 9.3750vw;
+}
+
+.logo-area > img {
+    width: 100%;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 27.7693vw;
+    height: 2vh;
+    padding: 2vw 0;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.nav-item + .nav-item {
+    margin-left: 1vw;
+}
+
+.nav-item:nth-child(1):before {
+    content: '';
+    display: inline-block;
+    background: url(./nav-myPage.png) no-repeat;
+    background-size: contain;
+    width: 1.1458vw;
+    height: 1.1458vw;
+    margin-right: 1vw;
+    margin-top: -0.3vw;
+}
+
+.nav-item:nth-child(2):before {
+    content: '';
+    display: inline-block;
+    background: url(./nav-notify.png) no-repeat;
+    background-size: contain;
+    width: 1.1458vw;
+    height: 1.1458vw;
+    margin-right: 1vw;
+    margin-top: -0.3vw;
+}
+
+.nav-item:nth-child(3):before {
+    content: '';
+    display: inline-block;
+    background: url(./nav-faq.png) no-repeat;
+    background-size: contain;
+    width: 1.1458vw;
+    height: 1.1458vw;
+    margin-right: 1vw;
+    margin-top: -0.3vw;
+}
+
+.nav-item:nth-child(4):before {
+    content: '';
+    display: inline-block;
+    background: url(./nav-basket.png) no-repeat;
+    background-size: contain;
+    width: 1.1458vw;
+    height: 1.1458vw;
+    margin-right: 1vw;
+    margin-top: -0.3vw;
+}
+
+
+.nav-item:nth-child(5) {
+    padding: 0.1vw;
+    width: 1.510vw;
+    height: 1.1145vw;
+    background: url(./menu-button.png) no-repeat;
+    background-size: contain;
+}
+</style>
+</template>
+
+
+<template id="templateFooter">
+<footer class="footer-box">
+    <div class="footer-logo">
+        <img src="../static/img-logoFooter.png" alt="마지막로고">
+    </div>
+
+    <div class="tosel-info">
+        <address class="tosel-add">
+            <p class="tosel-addtext">서울시 성북구 안암로 145 고려대학교 라이시움 4층</p>
+            <p class="tosel-addtextEnglish">Lyceum. Korea University, 145 Anam Ro, Seongbuk-Gu, Seoul, Korea 02841</p>
+            <p class="tosel-copyright">Copyright ⓒ TOSEL. All Rights Reserved.</p>
+        </address>
+
+        <div class="tosel-about">
+            <p class="tosel-name">상호명 : (주)에듀토셀</p>
+            <p class="tosel-number">사업자 등록번호 : 209-81-55585</p>
+            <p class="tosel-owner">대표자명 : 오승연</p>
+            <p class="tosel-phone">Tel: +82-02-923-0505 / Fax : +82-02-923-7070</p>
+        </div>
+
+    </div>
+</footer>
+<style>
+
+.footer-box {
+    width: 65%;
+    margin: 0 auto;
+    padding-top: 4.53125vw;
+    padding-bottom: 4.166vw;
+}
+
+.footer-logo {
+    width: 12.239vw;
+}
+
+.footer-logo > img {
+    width: 100%;
+}
+
+.tosel-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.tosel-add {
+    font-size: 0.677vw;
+}
+
+.tosel-about {
+    font-size: 0.677vw;
+}
+</style>
+</template>
+<script>
+class makeHeader extends HTMLElement {
+    connectedCallback() {
+        this.attachShadow({mode: 'open'});
+        this.shadowRoot.append(templateHeader.content.cloneNode(true)) 
+    }  
+}
+
+class makeFooter extends HTMLElement {
+    connectedCallback() {
+        this.attachShadow({mode: 'open'});
+        this.shadowRoot.append(templateFooter.content.cloneNode(true)) 
+    }  
+}
+
+customElements.define("custom-header", makeHeader);
+customElements.define("custom-footer", makeFooter);
+
+// const btns = document.querySelectorAll('.select-btn');
+
+// btns.forEach(function(btn) {
+//   btn.addEventListener('click', e => {
+//     let arrange = btn.nextElementSibling;
+//     let list = arrange.querySelectorAll('.arrange > li');
+//     clickBtn(btn, list)
+//   })
+// })
+
+// const clickBtn = (btn, list) => {
+//   if(btn.parentNode.classList.contains('active')) {
+//     btn.parentNode.classList.remove('active');
+//     list.forEach((opt) => {
+//       opt.removeEventListener('click', () => {
+//         handleSelect(btn, opt)
+//         //이부분을 클릭하면 요소들을 클릭했을 때도 active가 나타나겠지?
+//       })
+//     })
+//   } else {
+//     btn.parentNode.classList.add('active');
+//     list.forEach((opt) => {
+//     opt.addEventListener('click', () => {
+//       handleSelect(btn, opt)
+//     })
+//     })
+//   }
+// }
+
+// const handleSelect = (btns, item) => {
+//   btns.innerHTML = item.textContent;
+//   btns.parentNode.classList.remove('active');
+// }
+
+
+// </script>
+
+</body>
+</html>
